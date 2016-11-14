@@ -1,9 +1,10 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 
 namespace NetCoreEx.Geometry
 {
     [StructLayout(LayoutKind.Sequential)]
-    public struct Point
+    public struct Point : IEquatable<Point>
     {
         public Point(int x, int y)
         {
@@ -18,7 +19,6 @@ namespace NetCoreEx.Geometry
 
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
             return obj is Point && this.Equals((Point)obj);
         }
 
@@ -41,7 +41,7 @@ namespace NetCoreEx.Geometry
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public struct PointS
+    public struct PointS : IEquatable<PointS>
     {
         public PointS(short x, short y)
         {
@@ -56,7 +56,6 @@ namespace NetCoreEx.Geometry
 
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
             return obj is PointS && this.Equals((PointS)obj);
         }
 
