@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreEx.BinaryExtensions", "NetCoreEx.BinaryExtensions\NetCoreEx.BinaryExtensions.csproj", "{5F310A0B-7D11-437C-A574-1463A96B01D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreEx.Geometry", "NetCoreEx.Geometry\NetCoreEx.Geometry.csproj", "{33057BB1-D151-45B0-AB6C-62A3EE797DFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{921221CA-583B-4D5F-9C35-FE997A6D235A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{7A89FF6D-9053-44C8-A672-E8C21B409C09}"
+	ProjectSection(SolutionItems) = preProject
+		Misc\Logo.png = Misc\Logo.png
+		Misc\Logo.svg = Misc\Logo.svg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{B41DEC21-A297-4F2D-ABE8-8F5605B1F2C7}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet\Build.ps1 = NuGet\Build.ps1
+		NuGet\NetCoreEx.BinaryExtensions.nuspec = NuGet\NetCoreEx.BinaryExtensions.nuspec
+		NuGet\NetCoreEx.Geometry.nuspec = NuGet\NetCoreEx.Geometry.nuspec
+		NuGet\NetCoreEx.Source.nuspec = NuGet\NetCoreEx.Source.nuspec
+		NuGet\Package-Tools.ps1 = NuGet\Package-Tools.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F310A0B-7D11-437C-A574-1463A96B01D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F310A0B-7D11-437C-A574-1463A96B01D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F310A0B-7D11-437C-A574-1463A96B01D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F310A0B-7D11-437C-A574-1463A96B01D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33057BB1-D151-45B0-AB6C-62A3EE797DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33057BB1-D151-45B0-AB6C-62A3EE797DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33057BB1-D151-45B0-AB6C-62A3EE797DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33057BB1-D151-45B0-AB6C-62A3EE797DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A89FF6D-9053-44C8-A672-E8C21B409C09} = {921221CA-583B-4D5F-9C35-FE997A6D235A}
+		{B41DEC21-A297-4F2D-ABE8-8F5605B1F2C7} = {921221CA-583B-4D5F-9C35-FE997A6D235A}
+	EndGlobalSection
+EndGlobal

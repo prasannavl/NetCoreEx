@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="190.52422mm"
+   height="187.5619mm"
+   viewBox="0 0 675.0858 664.58942"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Logo.svg"
+   inkscape:export-filename="D:\Workspace\Projects\NetCoreEx\Misc\Logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="326.40511"
+     inkscape:cy="398.53536"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1060"
+     inkscape:window-height="684"
+     inkscape:window-x="225"
+     inkscape:window-y="55"
+     inkscape:window-maximized="0"
+     fit-margin-top="20"
+     fit-margin-left="20"
+     fit-margin-right="10"
+     fit-margin-bottom="20" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-39.752541,-193.88639)">
+    <path
+       style="fill:#682079;fill-opacity:1"
+       d="M 332.29492 70.865234 A 261.42856 261.42856 0 0 0 70.865234 332.29492 A 261.42856 261.42856 0 0 0 332.29492 593.72266 A 261.42856 261.42856 0 0 0 589.16992 379.88477 A 49.285713 49.285713 0 0 1 576.42773 381.58008 A 49.285713 49.285713 0 0 1 527.14258 332.29492 A 49.285713 49.285713 0 0 1 576.42773 283.00977 A 49.285713 49.285713 0 0 1 589.22266 284.75977 A 261.42856 261.42856 0 0 0 332.29492 70.865234 z "
+       transform="translate(39.752541,193.88639)"
+       id="path4142" />
+    <ellipse
+       style="fill:#cf17fc;fill-opacity:1;stroke:none;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4146"
+       cx="614.57355"
+       cy="526.18109"
+       rx="39.0732"
+       ry="40.359589" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="238.57141"
+       y="598.64789"
+       id="text4244"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4246"
+         x="238.57141"
+         y="598.64789"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:240px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Bold';fill:#ffffff">Ex</tspan></text>
+  </g>
+</svg>
