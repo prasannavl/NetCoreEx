@@ -49,6 +49,32 @@ namespace NetCoreEx.Geometry
             this.Y = y;
         }
 
+        public bool Equals(PointS other)
+        {
+            return (this.X == other.X) && (this.Y == other.Y);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            return obj is PointS && this.Equals((PointS)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked { return (this.X * 397) ^ this.Y; }
+        }
+
         public short X, Y;
+
+        public static bool operator ==(PointS left, PointS right)
+        {
+            return (left.X == right.X) && (left.Y == right.Y);
+        }
+
+        public static bool operator !=(PointS left, PointS right)
+        {
+            return !(left == right);
+        }
     }
 }
