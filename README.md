@@ -2,6 +2,8 @@
 
 Extended collection of packages that provide common structures, extensions, and helpers that can be used across many libraries, and applications.
 
+<img src="https://raw.githubusercontent.com/prasannavl/NetCoreEx/master/Misc/Logo.png" width="64" alt="Logo"/>
+
 **Nuget:**
 > Install-Package NetCoreEx.[PackageName]
 
