@@ -46,12 +46,30 @@ namespace NetCoreEx.Geometry
     [StructLayout(LayoutKind.Sequential)]
     public struct RectangleS
     {
+        public static RectangleS Create(short x, short y, short width, short height)
+        {
+            return new RectangleS(x, y, (short)(width + x), (short)(height + y));
+        }
+
         public RectangleS(short left = 0, short top = 0, short right = 0, short bottom = 0)
         {
             this.Left = left;
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
+        }
+
+        public RectangleS(short width = 0, short height = 0)
+        {
+            this.Left = 0;
+            this.Top = 0;
+            this.Right = width;
+            this.Bottom = height;
+        }
+
+        public RectangleS(short all = 0)
+        {
+            this.Left = this.Right = this.Top = this.Bottom = all;
         }
 
         public short Left, Top, Right, Bottom;
@@ -66,6 +84,11 @@ namespace NetCoreEx.Geometry
         {
             get { return (short)(this.Bottom - this.Top); }
             set { this.Bottom = (short)(this.Top + value); }
+        }
+
+        public Size GetSize()
+        {
+            return new Size(this.Width, this.Height);
         }
     }
 }
