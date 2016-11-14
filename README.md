@@ -11,14 +11,17 @@ All packages fully support the **CoreCLR.**
 
 ### Goals
 
-Abstraction operations like:
-
-- Common IntPtr operations (Example: Break IntPtr into low, and high, convert to int safely on both 32-bit and 64-bit safely, and so on)
-- Common binary manipulations of int, long, etc (Example: get or set low and high value of int) 
-- Common geometric patterns like Rect, Point, Size, RectF, RectS and so on
+- Abstract as much framework-like structs, and classes that aren't a part of the BCL.
+- Provide helpers, and extensions that are commonly re-implemented redundantly by several libraries, and frameworks.
 
 ### Packages
 
 - **`NetCoreEx.Source`** - A fully inclusive source-only package.
 - **`NetCoreEx.Geometry`** - Contains common core geometries like Point, PointS, Rectangle, Size, RectangleF, SizeF and so on.
 - **`NetCoreEx.BinaryExtensions`** - Pointers and numeric binary helpers.
+
+### Current Features
+
+- Common IntPtr operations (Example: Break IntPtr into low, and high, convert to int safely on both 32-bit and 64-bit safely, and so on)
+- Common binary manipulations of int, long, etc (Example: get or set low and high value of int) 
+- Common geometric patterns like Rect, Point, Size, RectF, RectS and so on
