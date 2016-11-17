@@ -63,13 +63,7 @@ namespace NetCoreEx.Geometry {
             }
         }
 
-		public bool IsEmpty
-		{
-		  get
-		  {
-			return this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
-		  }
-		}
+		public bool IsEmpty => this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
 
 		public int  Width { get {  return unchecked((int)(Right - Left)); } set { Right = unchecked((int)(Left + value)); } }
         public int  Height { get { return unchecked((int)(Bottom - Top)); } set { Bottom = unchecked((int)(Top + value)); } }
@@ -291,13 +285,7 @@ namespace NetCoreEx.Geometry {
             }
         }
 
-		public bool IsEmpty
-		{
-		  get
-		  {
-			return this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
-		  }
-		}
+		public bool IsEmpty => this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
 
 		public short  Width { get {  return unchecked((short)(Right - Left)); } set { Right = unchecked((short)(Left + value)); } }
         public short  Height { get { return unchecked((short)(Bottom - Top)); } set { Bottom = unchecked((short)(Top + value)); } }
@@ -519,13 +507,7 @@ namespace NetCoreEx.Geometry {
             }
         }
 
-		public bool IsEmpty
-		{
-		  get
-		  {
-			return this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
-		  }
-		}
+		public bool IsEmpty => this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
 
 		public float  Width { get {  return unchecked((float)(Right - Left)); } set { Right = unchecked((float)(Left + value)); } }
         public float  Height { get { return unchecked((float)(Bottom - Top)); } set { Bottom = unchecked((float)(Top + value)); } }

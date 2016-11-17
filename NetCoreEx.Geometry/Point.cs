@@ -55,6 +55,8 @@ namespace NetCoreEx.Geometry {
 			var culture = CultureInfo.CurrentCulture;
             return $"{{ X = {X.ToString(culture)}, Y = {Y.ToString(culture)} }}";
         }
+
+		public bool IsEmpty => this.X == 0 && this.Y == 0;
 	}
 
     [StructLayout(LayoutKind.Sequential)]
@@ -107,6 +109,8 @@ namespace NetCoreEx.Geometry {
 			var culture = CultureInfo.CurrentCulture;
             return $"{{ X = {X.ToString(culture)}, Y = {Y.ToString(culture)} }}";
         }
+
+		public bool IsEmpty => this.X == 0 && this.Y == 0;
 	}
 
     [StructLayout(LayoutKind.Sequential)]
@@ -159,6 +163,8 @@ namespace NetCoreEx.Geometry {
 			var culture = CultureInfo.CurrentCulture;
             return $"{{ X = {X.ToString(culture)}, Y = {Y.ToString(culture)} }}";
         }
+
+		public bool IsEmpty => this.X == 0 && this.Y == 0;
 	}
 
 }

@@ -84,13 +84,7 @@ namespace NetCoreEx.Geometry {
             }
         }
 
-		public bool IsEmpty
-		{
-		  get
-		  {
-			return this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
-		  }
-		}
+		public bool IsEmpty => this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
 
 		public <#= type #>  Width { get {  return unchecked((<#= type #>)(Right - Left)); } set { Right = unchecked((<#= type #>)(Left + value)); } }
         public <#= type #>  Height { get { return unchecked((<#= type #>)(Bottom - Top)); } set { Bottom = unchecked((<#= type #>)(Top + value)); } }
