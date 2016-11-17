@@ -58,7 +58,7 @@ namespace NetCoreEx.Geometry {
 			return $"{{ Width = {Width.ToString(culture)}, Height = {Height.ToString(culture)} }}";
         }
 		
-		public bool IsEmpty => this.X == 0 && this.Y == 0;
+		public bool IsEmpty => this.Width == 0 && this.Height == 0;
 	}
 
     [StructLayout(LayoutKind.Sequential)]
@@ -114,7 +114,7 @@ namespace NetCoreEx.Geometry {
 			return $"{{ Width = {Width.ToString(culture)}, Height = {Height.ToString(culture)} }}";
         }
 		
-		public bool IsEmpty => this.X == 0 && this.Y == 0;
+		public bool IsEmpty => this.Width == 0 && this.Height == 0;
 	}
 
     [StructLayout(LayoutKind.Sequential)]
@@ -170,7 +170,7 @@ namespace NetCoreEx.Geometry {
 			return $"{{ Width = {Width.ToString(culture)}, Height = {Height.ToString(culture)} }}";
         }
 		
-		public bool IsEmpty => this.X == 0 && this.Y == 0;
+		public bool IsEmpty => this.Width == 0 && this.Height == 0;
 	}
 
 }
