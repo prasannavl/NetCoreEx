@@ -8,6 +8,7 @@
 
 using System;
 using System.Runtime.InteropServices;
+using System.Globalization;
 
 namespace NetCoreEx.Geometry {
 
@@ -100,6 +101,11 @@ namespace NetCoreEx.Geometry {
 				return new <#= className #>(x, y, (<#= type #>)(width + x), (<#= type #>)(height + y));			
 			}
 		}
+
+		public override string ToString() {
+			var culture = CultureInfo.CurrentCulture;
+            return $"{{ Left = {Left.ToString(culture)}, Top = {Top.ToString(culture)} , Right = {Right.ToString(culture)}, Bottom = {Bottom.ToString(culture)} }}, {{ Width: {Width.ToString(culture)}, Height: {Height.ToString(culture)} }}";
+        }
 
         public static <#= className #> From(ref <#= className #> lvalue, ref <#= className #> rvalue,
             Func<<#= type #> , <#= type #> , <#= type #> > leftTopOperation,

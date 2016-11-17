@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Runtime.InteropServices;
+using System.Globalization;
 
 namespace NetCoreEx.Geometry {
 
@@ -49,6 +50,11 @@ namespace NetCoreEx.Geometry {
 			X = x;
 			Y = y;
 		}
+
+		public override string ToString() {
+			var culture = CultureInfo.CurrentCulture;
+            return $"{{ X = {X.ToString(culture)}, Y = {Y.ToString(culture)} }}";
+        }
 	}
 
     [StructLayout(LayoutKind.Sequential)]
@@ -96,6 +102,11 @@ namespace NetCoreEx.Geometry {
 			X = x;
 			Y = y;
 		}
+
+		public override string ToString() {
+			var culture = CultureInfo.CurrentCulture;
+            return $"{{ X = {X.ToString(culture)}, Y = {Y.ToString(culture)} }}";
+        }
 	}
 
     [StructLayout(LayoutKind.Sequential)]
@@ -143,6 +154,11 @@ namespace NetCoreEx.Geometry {
 			X = x;
 			Y = y;
 		}
+
+		public override string ToString() {
+			var culture = CultureInfo.CurrentCulture;
+            return $"{{ X = {X.ToString(culture)}, Y = {Y.ToString(culture)} }}";
+        }
 	}
 
 }

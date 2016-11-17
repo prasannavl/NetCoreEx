@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Runtime.InteropServices;
+using System.Globalization;
 
 namespace NetCoreEx.Geometry {
 
@@ -79,6 +80,11 @@ namespace NetCoreEx.Geometry {
 				return new Rectangle(x, y, (int)(width + x), (int)(height + y));			
 			}
 		}
+
+		public override string ToString() {
+			var culture = CultureInfo.CurrentCulture;
+            return $"{{ Left = {Left.ToString(culture)}, Top = {Top.ToString(culture)} , Right = {Right.ToString(culture)}, Bottom = {Bottom.ToString(culture)} }}, {{ Width: {Width.ToString(culture)}, Height: {Height.ToString(culture)} }}";
+        }
 
         public static Rectangle From(ref Rectangle lvalue, ref Rectangle rvalue,
             Func<int , int , int > leftTopOperation,
@@ -303,6 +309,11 @@ namespace NetCoreEx.Geometry {
 			}
 		}
 
+		public override string ToString() {
+			var culture = CultureInfo.CurrentCulture;
+            return $"{{ Left = {Left.ToString(culture)}, Top = {Top.ToString(culture)} , Right = {Right.ToString(culture)}, Bottom = {Bottom.ToString(culture)} }}, {{ Width: {Width.ToString(culture)}, Height: {Height.ToString(culture)} }}";
+        }
+
         public static RectangleS From(ref RectangleS lvalue, ref RectangleS rvalue,
             Func<short , short , short > leftTopOperation,
             Func<short , short , short > rightBottomOperation = null)
@@ -525,6 +536,11 @@ namespace NetCoreEx.Geometry {
 				return new RectangleF(x, y, (float)(width + x), (float)(height + y));			
 			}
 		}
+
+		public override string ToString() {
+			var culture = CultureInfo.CurrentCulture;
+            return $"{{ Left = {Left.ToString(culture)}, Top = {Top.ToString(culture)} , Right = {Right.ToString(culture)}, Bottom = {Bottom.ToString(culture)} }}, {{ Width: {Width.ToString(culture)}, Height: {Height.ToString(culture)} }}";
+        }
 
         public static RectangleF From(ref RectangleF lvalue, ref RectangleF rvalue,
             Func<float , float , float > leftTopOperation,
