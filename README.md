@@ -23,5 +23,5 @@ All packages fully support the **CoreCLR.**
 ### Current Features
 
 - Common IntPtr operations (Example: Break IntPtr into low, and high, convert to int safely on both 32-bit and 64-bit safely, and so on)
-- Common binary manipulations of int, long, etc (Example: get or set low and high value of int) 
-- Common geometric patterns like Rect, Point, Size, RectF, RectS and so on
+- Common binary manipulations of int, long, etc (Example: get or set low and high value of int)
+- Common geometric patterns like Rect, Point, Size, RectF, RectS with many in-built helpers for convenience.
