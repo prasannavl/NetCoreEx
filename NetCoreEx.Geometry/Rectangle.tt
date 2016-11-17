@@ -1,0 +1,255 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+using System;
+using System.Runtime.InteropServices;
+
+namespace NetCoreEx.Geometry {
+
+<#
+    var classes = new [] { "Rectangle", "RectangleS", "RectangleF" };
+    var types = new[] { "int", "short", "float" };
+    var sizeTypes = new[] {"Size", "SizeS", "SizeF"};
+
+	var classEnum = classes.GetEnumerator();
+	var typeEnum = types.GetEnumerator();
+    var sizeTypeEnum = sizeTypes.GetEnumerator();
+	while (classEnum.MoveNext() && typeEnum.MoveNext() && sizeTypeEnum.MoveNext())
+    {
+        var className = classEnum.Current;
+        var type = typeEnum.Current;
+        var sizeType = sizeTypeEnum.Current;
+	#>
+    [StructLayout(LayoutKind.Sequential)]
+	public partial struct <#= className #> : IEquatable<<#= className #>>
+	{
+		public <#= className #>(<#= type #> left = 0, <#= type #>  top = 0, <#= type #>  right = 0, <#= type #>  bottom = 0)
+        {
+            Left = left;
+            Top = top;
+            Right = right;
+            Bottom = bottom;
+        }
+
+        public <#= className #>(<#= type #>  width = 0, <#= type #>  height = 0) : this(0, 0, width, height) { }
+        public <#= className #>(<#= type #>  all = 0) : this(all, all, all, all) { }
+
+        public <#= type #>  Left, Top, Right, Bottom;
+
+        public bool Equals(<#= className #> other)
+        {
+            return (Left == other.Left) && (Right == other.Right) && (Top == other.Top) && (Bottom == other.Bottom);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is <#= className #> && Equals((<#= className #>)obj);
+        }
+
+        public static bool operator ==(<#= className #> left, <#= className #> right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(<#= className #> left, <#= className #> right)
+        {
+            return !(left == right);
+        }
+
+		public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = (int)Left;
+                hashCode = (hashCode*397) ^ (int)Top;
+                hashCode = (hashCode*397) ^ (int)Right;
+                hashCode = (hashCode*397) ^ (int)Bottom;
+                return hashCode;
+            }
+        }
+
+		public <#= sizeType #> Size
+        {
+            get { return new <#= sizeType #>(Width, Height); }
+            set
+            {
+                Width = value.Width;
+                Height = value.Height;
+            }
+        }
+
+		public bool IsEmpty
+		{
+		  get
+		  {
+			return this.Left == 0 && this.Top == 0 && this.Right == 0 && this.Bottom == 0;
+		  }
+		}
+
+		public <#= type #>  Width { get {  return unchecked((<#= type #>)(Right - Left)); } set { Right = unchecked((<#= type #>)(Left + value)); } }
+        public <#= type #>  Height { get { return unchecked((<#= type #>)(Bottom - Top)); } set { Bottom = unchecked((<#= type #>)(Top + value)); } }
+
+		public static <#= className #> Create(<#= type #>  x, <#= type #>  y, <#= type #>  width, <#= type #>  height)
+		{
+			unchecked {
+				return new <#= className #>(x, y, (<#= type #>)(width + x), (<#= type #>)(height + y));			
+			}
+		}
+
+        public static <#= className #> From(ref <#= className #> lvalue, ref <#= className #> rvalue,
+            Func<<#= type #> , <#= type #> , <#= type #> > leftTopOperation,
+            Func<<#= type #> , <#= type #> , <#= type #> > rightBottomOperation = null)
+        {
+            if (rightBottomOperation == null) rightBottomOperation = leftTopOperation;
+            return new <#= className #>(
+                leftTopOperation(lvalue.Left, rvalue.Left),
+                leftTopOperation(lvalue.Top, rvalue.Top),
+                rightBottomOperation(lvalue.Right, rvalue.Right),
+                rightBottomOperation(lvalue.Bottom, rvalue.Bottom)
+            );
+        }
+
+        public void Add(<#= className #> value)
+        {
+            Add(ref this, ref value);
+        }
+
+        public void Subtract(<#= className #> value)
+        {
+            Subtract(ref this, ref value);
+        }
+
+		public void Multiply(<#= className #> value)
+        {
+            Multiply(ref this, ref value);
+        }
+
+		public void Divide(<#= className #> value)
+        {
+            Divide(ref this, ref value);
+        }
+
+        public void Deflate(<#= className #> value)
+        {
+            Deflate(ref this, ref value);
+        }
+
+        public void Inflate(<#= className #> value)
+        {
+            Inflate(ref this, ref value);
+        }
+
+        public void Offset(<#= type #>  x, <#= type #>  y)
+        {
+            Offset(ref this, x, y);
+        }
+
+		public void OffsetTo(<#= type #>  x, <#= type #>  y)
+        {
+            OffsetTo(ref this, x, y);
+        }
+
+        public void Scale(<#= type #>  x, <#= type #>  y)
+        {
+            Scale(ref this, x, y);
+        }
+
+		public void ScaleTo(<#= type #>  x, <#= type #>  y)
+        {
+            ScaleTo(ref this, x, y);
+        }
+
+        public static void Add(ref <#= className #> lvalue, ref <#= className #> rvalue)
+        {
+            lvalue.Left += rvalue.Left;
+            lvalue.Top += rvalue.Top;
+            lvalue.Right += rvalue.Right;
+            lvalue.Bottom += rvalue.Bottom;
+        }
+
+        public static void Subtract(ref <#= className #> lvalue, ref <#= className #> rvalue)
+        {
+            lvalue.Left -= rvalue.Left;
+            lvalue.Top -= rvalue.Top;
+            lvalue.Right -= rvalue.Right;
+            lvalue.Bottom -= rvalue.Bottom;
+        }
+
+		public static void Multiply(ref <#= className #> lvalue, ref <#= className #> rvalue)
+        {
+            lvalue.Left *= rvalue.Left;
+            lvalue.Top *= rvalue.Top;
+            lvalue.Right *= rvalue.Right;
+            lvalue.Bottom *= rvalue.Bottom;
+        }
+
+		public static void Divide(ref <#= className #> lvalue, ref <#= className #> rvalue)
+        {
+            lvalue.Left /= rvalue.Left;
+            lvalue.Top /= rvalue.Top;
+            lvalue.Right /= rvalue.Right;
+            lvalue.Bottom /= rvalue.Bottom;
+        }
+
+        public static void Deflate(ref <#= className #> target, ref <#= className #> deflation)
+        {
+            target.Top += deflation.Top;
+            target.Left += deflation.Left;
+            target.Bottom -= deflation.Bottom;
+            target.Right -= deflation.Right;
+        }
+
+        public static void Inflate(ref <#= className #> target, ref <#= className #> inflation)
+        {
+            target.Top -= inflation.Top;
+            target.Left -= inflation.Left;
+            target.Bottom += inflation.Bottom;
+            target.Right += inflation.Right;
+        }
+
+        public static void Offset(ref <#= className #> target, <#= type #>  x, <#= type #>  y)
+        {
+            target.Top += y;
+            target.Left += x;
+            target.Bottom += y;
+            target.Right += x;
+        }
+
+		public static void OffsetTo(ref <#= className #> target, <#= type #> x, <#= type #> y)
+        {
+            var width = target.Width;
+            var height = target.Height;
+            target.Left = x;
+            target.Top = y;
+            target.Right = width;
+            target.Bottom = height;
+        }
+
+        public static void Scale(ref <#= className #> target, <#= type #>  x, <#= type #>  y)
+        {
+            target.Top *= y;
+            target.Left *= x;
+            target.Bottom *= y;
+            target.Right *= x;
+        }
+
+		public static void ScaleTo(ref <#= className #> target, <#= type #>  x, <#= type #>  y)
+        {
+			unchecked {
+				x = (<#= type #>)(target.Left / x);
+				y = (<#= type #>)(target.Top / y);
+			}
+			Scale(ref target, x, y);
+        }
+
+	}
+	<#
+    }
+#>
+
+}

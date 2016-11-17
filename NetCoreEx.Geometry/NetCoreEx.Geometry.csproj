@@ -35,14 +35,40 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Content Include="Point.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Point.cs</LastGenOutput>
+    </Content>
+    <Content Include="Rectangle.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Rectangle.cs</LastGenOutput>
+    </Content>
+    <Content Include="Size.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Size.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\RectangleHelpers.cs" />
     <Compile Include="Margins.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="Point.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Point.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Size.cs" />
+    <Compile Include="Rectangle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rectangle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Size.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Size.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

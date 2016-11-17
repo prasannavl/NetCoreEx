@@ -1,0 +1,74 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+using System;
+using System.Runtime.InteropServices;
+
+namespace NetCoreEx.Geometry {
+
+<#
+    var classes = new[] {"Point", "PointS", "PointF"};
+    var types = new[] { "int", "short", "float" };
+
+	var classEnum = classes.GetEnumerator();
+	var typeEnum = types.GetEnumerator();
+
+    while (classEnum.MoveNext() && typeEnum.MoveNext())
+    {
+        var className = classEnum.Current;
+        var type = typeEnum.Current;
+        #>
+    [StructLayout(LayoutKind.Sequential)]
+	public partial struct <#= className #> : IEquatable<<#= className #>>
+	{
+	    public <#= className #>(<#= type #>  x, <#= type #>  y)
+        {
+			X = x;
+			Y = y;
+        }
+
+        public bool Equals(<#= className #> other)
+        {
+            return (X == other.X) && (Y == other.Y);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is <#= className #> && Equals((<#= className #>) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked { return ((int)X*397) ^ (int)Y; }
+        }
+
+        public <#= type #>  X, Y;
+
+        public static bool operator ==(<#= className #> left, <#= className #> right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(<#= className #> left, <#= className #> right)
+        {
+            return !(left == right);
+        }
+
+		public void Offset(<#= type #>  x, <#= type #>  y) {
+			X += x;
+			Y += y;
+		}
+
+		public void Set(<#= type #>  x, <#= type #>  y) {
+			X = x;
+			Y = y;
+		}
+	}
+
+<# } #>
+}

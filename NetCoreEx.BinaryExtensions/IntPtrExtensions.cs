@@ -6,12 +6,12 @@ namespace NetCoreEx.BinaryExtensions
     {
         public static int ToSafeInt32(this IntPtr ptr)
         {
-            return unchecked(IntPtr.Size > 4 ? (int)ptr.ToInt64() : ptr.ToInt32());
+            return unchecked(IntPtr.Size > 4 ? (int) ptr.ToInt64() : ptr.ToInt32());
         }
 
         public static uint ToSafeUInt32(this IntPtr ptr)
         {
-            return IntPtr.Size > 4 ? (uint)ptr.ToInt64() : (uint)ptr.ToInt32();
+            return IntPtr.Size > 4 ? (uint) ptr.ToInt64() : (uint) ptr.ToInt32();
         }
 
         public static void BreakInt64Into32(this IntPtr ptr, out int high32, out int low32)
