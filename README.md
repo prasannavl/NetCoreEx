@@ -13,12 +13,14 @@ All packages fully support the **CoreCLR.**
 
 - Abstract as much framework-like structs, and classes that aren't a part of the BCL.
 - Provide helpers, and extensions that are commonly re-implemented redundantly by several libraries, and frameworks.
+- Abstract the concept of colors in a simple and elegant way that's binary compatible with C-data structures, with clean extensions for conversions.
 
 ### Packages
 
 - **`NetCoreEx.Source`** - A fully inclusive source-only package.
 - **`NetCoreEx.Geometry`** - Contains common core geometries like Point, PointS, Rectangle, Size, RectangleF, SizeF and so on.
 - **`NetCoreEx.BinaryExtensions`** - Pointers and numeric binary helpers.
+- **`NetCoreEx.Colors`** - [TODO] Color abstractions.
 
 ### Current Features
 
