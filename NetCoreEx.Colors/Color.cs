@@ -9,16 +9,22 @@ namespace NetCoreEx.Colors
     [StructLayout(LayoutKind.Sequential)]
     public struct Color
     {
-        private uint value;
+        public uint Value { get; set; }
 
         public Color(uint value)
         {
-            this.value = value;
+            this.Value = value;
+        }
+
+        public static Color FromBgr24(byte r, byte g, byte b)
+        {
+            return new Color(ColorHelpers.Bgr24(r, g, b));
         }
 
         public Color(byte b, byte g, byte r, byte a)
         {
-            this.value = ColorHelpers.ToBgra32(r, g, b, a);
+            this.Value = ColorHelpers.Bgra32(r, g, b, a);
         }
     }
+
 }
