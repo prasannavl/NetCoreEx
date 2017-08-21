@@ -17,10 +17,11 @@ All packages fully support the **CoreCLR.**
 
 ### Packages
 
-- **`NetCoreEx.Source`** - A fully inclusive source-only package.
 - **`NetCoreEx.Geometry`** - Contains common core geometries like Point, PointS, Rectangle, Size, RectangleF, SizeF and so on.
 - **`NetCoreEx.BinaryExtensions`** - Pointers and numeric binary helpers.
-- **`NetCoreEx.Colors`** - [TODO] Color abstractions.
+- **`NetCoreEx.Colors`** - Color abstractions.
+
+**Note:** - Starting from v3, all packages are `netstandard 1.4`, and `Source` nuget packages are no more.
 
 ### Current Features
 

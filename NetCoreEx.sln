@@ -1,35 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.25914.0
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreEx.BinaryExtensions", "NetCoreEx.BinaryExtensions\NetCoreEx.BinaryExtensions.csproj", "{5F310A0B-7D11-437C-A574-1463A96B01D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreEx.BinaryExtensions", "NetCoreEx.BinaryExtensions\NetCoreEx.BinaryExtensions.csproj", "{762AB672-0363-4706-B78B-E9E5E18438F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreEx.Geometry", "NetCoreEx.Geometry\NetCoreEx.Geometry.csproj", "{33057BB1-D151-45B0-AB6C-62A3EE797DFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreEx.Colors", "NetCoreEx.Colors\NetCoreEx.Colors.csproj", "{6DF52F30-B4C9-458B-8E30-4E636B7A905D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{921221CA-583B-4D5F-9C35-FE997A6D235A}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		LICENSE.txt = LICENSE.txt
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{7A89FF6D-9053-44C8-A672-E8C21B409C09}"
-	ProjectSection(SolutionItems) = preProject
-		Misc\Logo.png = Misc\Logo.png
-		Misc\Logo.svg = Misc\Logo.svg
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{B41DEC21-A297-4F2D-ABE8-8F5605B1F2C7}"
-	ProjectSection(SolutionItems) = preProject
-		NuGet\Build.ps1 = NuGet\Build.ps1
-		NuGet\NetCoreEx.BinaryExtensions.nuspec = NuGet\NetCoreEx.BinaryExtensions.nuspec
-		NuGet\NetCoreEx.Geometry.nuspec = NuGet\NetCoreEx.Geometry.nuspec
-		NuGet\NetCoreEx.Source.nuspec = NuGet\NetCoreEx.Source.nuspec
-		NuGet\Package-Tools.ps1 = NuGet\Package-Tools.ps1
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreEx.Colors", "NetCoreEx.Colors\NetCoreEx.Colors.csproj", "{793AE9F8-74AB-496D-90FB-AABC3C3629D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreEx.Geometry", "NetCoreEx.Geometry\NetCoreEx.Geometry.csproj", "{8EF521B2-2530-4A04-B3A9-2AFC1839180D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,24 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5F310A0B-7D11-437C-A574-1463A96B01D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F310A0B-7D11-437C-A574-1463A96B01D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F310A0B-7D11-437C-A574-1463A96B01D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F310A0B-7D11-437C-A574-1463A96B01D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33057BB1-D151-45B0-AB6C-62A3EE797DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33057BB1-D151-45B0-AB6C-62A3EE797DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33057BB1-D151-45B0-AB6C-62A3EE797DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33057BB1-D151-45B0-AB6C-62A3EE797DFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{793AE9F8-74AB-496D-90FB-AABC3C3629D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{793AE9F8-74AB-496D-90FB-AABC3C3629D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{793AE9F8-74AB-496D-90FB-AABC3C3629D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{793AE9F8-74AB-496D-90FB-AABC3C3629D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{762AB672-0363-4706-B78B-E9E5E18438F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762AB672-0363-4706-B78B-E9E5E18438F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762AB672-0363-4706-B78B-E9E5E18438F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762AB672-0363-4706-B78B-E9E5E18438F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DF52F30-B4C9-458B-8E30-4E636B7A905D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF52F30-B4C9-458B-8E30-4E636B7A905D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF52F30-B4C9-458B-8E30-4E636B7A905D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DF52F30-B4C9-458B-8E30-4E636B7A905D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF521B2-2530-4A04-B3A9-2AFC1839180D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF521B2-2530-4A04-B3A9-2AFC1839180D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF521B2-2530-4A04-B3A9-2AFC1839180D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF521B2-2530-4A04-B3A9-2AFC1839180D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{7A89FF6D-9053-44C8-A672-E8C21B409C09} = {921221CA-583B-4D5F-9C35-FE997A6D235A}
-		{B41DEC21-A297-4F2D-ABE8-8F5605B1F2C7} = {921221CA-583B-4D5F-9C35-FE997A6D235A}
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B86E3A6B-6C10-427F-8A55-92F7F8322DAB}
 	EndGlobalSection
 EndGlobal
